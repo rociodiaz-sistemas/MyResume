@@ -4,8 +4,8 @@ export const TEXTS_EXPERIENCE_CFO = ["> As the lead frontend developer for this 
 ];
 
 export const TEXTS_EXPERIENCE_BAUFEST = [
-    "> Started my developing career here developing in C# and AngularJS, after getting selected from their coding bootcamp. My first project was with Camuzzi Gas Pampeana, solving bugs and maintaining the mobile app.",
-    "> Was quickly moved to work with our US clients, like USA American Automobile Associaton project (Triple A). Acquired experience communicating and working with international clients. Participated in the startup process, learnt ReactJS as a requirement for the project and mocked and designed the apps skeleton. ",
+    "> I got selected from their coding bootcamp. My first project was with Camuzzi Gas Pampeana, solving bugs and maintaining the mobile app.",
+    "> Was quickly moved to work with our US clients, like USA American Automobile Associaton project (Triple A). Acquired experience communicating and working with international clients. ",
     "> My last project was with American Logistics, which gave me the oportunity to learn more about accessibility since a majority of the users had physical impediments. "
 
 ];

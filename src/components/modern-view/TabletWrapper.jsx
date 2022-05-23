@@ -2,9 +2,9 @@ import { TEXTS_EXPERIENCE_BAUFEST, TEXTS_EXPERIENCE_CFO, TEXTS_FORMATION } from 
 
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
-import { Button } from '@mui/material';
 import Formation from './Formation';
 import Job from './Job';
+import LanguageButton from '../LanguageButton';
 import React from 'react';
 import Skills from './Skills';
 import Socials from './Socials';
@@ -15,8 +15,6 @@ import baufestLogo from '../../images/Baufest.png';
 import cfotech from '../../images/cfotech.png';
 import davinci from '../../images/davinci.png'
 import profilePic2 from '../../images/profpic.png';
-import resume from '../../pdfs/rocio-diaz-resume-cv.pdf'
-import { saveAs } from "file-saver";
 
 function TabletWrapper() {
     const [tab, setTab] = React.useState(0);
@@ -46,28 +44,27 @@ function TabletWrapper() {
         setSlide("slide-right")
     };
 
-    const saveFile = () => {
-        saveAs(
-            resume,
-            "rocio-diaz-resume.pdf"
-        );
-    };
-
     return (
         <div className="tablet-wrapper-container">
+
             <div className='black-tabs'>
                 <VerticalTabs setTab={handleTabChange} setActiveStep={setActiveStep} />
-                {/* <Dock /> */}
             </div>
             <div className="browser-mockup with-url">
                 <div className='content-page'>
-                    <img src={profilePic2} className="rounded-img" alt="pretty profile pic"></img>
-                    <h1>ROCIO DIAZ</h1>
-                    <p className='muted'> ReactJS | Frontend Developer</p>
-                    <Button style={{ marginTop: " 20px" }} onClick={saveFile} variant="contained">DOWNLOAD RESUME</Button>
+                    <div className='profile'>
+                        <img src={profilePic2} className="rounded-img" alt="pretty profile pic"></img>
+                        <h1>ROCIO DIAZ</h1>
+                        <p className='muted'> ReactJS | Frontend Developer</p>
+                        {/* <Button style={{ marginTop: " 20px" }} onClick={saveFile} variant="contained">DOWNLOAD RESUME</Button> */}
+                        <LanguageButton />
+                    </div>
+                    <div className='socials'>
+                        <Socials />
+                    </div>
                 </div>
-                <Socials />
             </div>
+
             <div className='black-container'>
                 <div className='black-content'>
                     <TabPanel className={slideDirectionClass} value={tab} index={0}>
@@ -101,11 +98,12 @@ function TabletWrapper() {
                     </TabPanel>
                     <TabPanel value={tab} index={3} className={slideDirectionClass}>
                         <Job styleDots={{ margin: "0px", paddingTop: "0px", position: "relative", bottom: "30px" }}
-                            activeStep={activeStep} index={2} title={"ReactJS frontend developer"} img={baufestLogo} alt="baufest logo" date="Nov 2018 - May 2021" href={'https://baufest.com/en/'} texts={TEXTS_EXPERIENCE_BAUFEST}>
+                            activeStep={activeStep} index={2} title={"ReactJS developer"} img={baufestLogo} alt="baufest logo" date="Nov 2018 - May 2021" href={'https://baufest.com/en/'} texts={TEXTS_EXPERIENCE_BAUFEST}>
                             {<ArrowBackIcon onClick={handleBack} fontSize='large' className='see-more-arrow' />}</Job>
                     </TabPanel>
                 </div>
             </div>
+
         </div>
     );
 }

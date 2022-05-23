@@ -8,7 +8,7 @@ export default function Job({ img, alt, date, texts, activeStep, href, children,
             <div className='title'><p className="title-ide">💼Experience </p> <p>{`(${index}) {`}</p></div>
             <Stack direction="row">
                 {index === 2 &&
-                    <IconButton style={{ height: "35px" }} className="see-more-arrow" aria-label="see-more">
+                    <IconButton value="arrow" style={{ height: "35px" }} className="see-more-arrow" aria-label="see-more">
                         {children}
                     </IconButton>
                 }
@@ -16,7 +16,7 @@ export default function Job({ img, alt, date, texts, activeStep, href, children,
                 <Chip className='text' label={title}></Chip>
                 <Chip className='text' label={date}></Chip>
                 {index === 1 &&
-                    <IconButton style={{ height: "35px" }} className="see-more-arrow" aria-label="see-more">
+                    <IconButton value="arrow" style={{ height: "35px" }} className="see-more-arrow" aria-label="see-more">
                         {children}
                     </IconButton>
                 }

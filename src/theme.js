@@ -10,11 +10,11 @@ export const theme = createTheme({
     //   },
     // },
     MuiTabs: {
-        styleOverrides: {
-            indicator: {
-                backgroundColor: "#e9c309"
-            }
+      styleOverrides: {
+        indicator: {
+          backgroundColor: "#e9c309"
         }
+      }
     },
     MuiChip: {
       styleOverrides: {
@@ -71,6 +71,22 @@ export const theme = createTheme({
             color: "#bc7fb8"
           }
         },
+      }
+    },
+    MuiButtonGroup: {
+      styleOverrides: {
+        root: {
+          backgroundColor: 'black',
+          color: "",
+          borderRadius: "9px",
+          letterSpacing: ".08em",
+          borderColor: "transparent",
+          height: "unset",
+          minWidth: "100px",
+          ":hover": {
+            backgroundColor: "#262121",
+          }
+        }
       }
     }
   },

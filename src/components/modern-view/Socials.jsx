@@ -8,17 +8,6 @@ import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 
 export default function Socials() {
-    const goToSocials = (e) => {
-        switch (e.target.id) {
-            case "linkedin":
-                window.open("https://www.linkedin.com/in/roc%C3%ADo-d%C3%ADaz-698444194/",)
-                break;
-
-            default:
-                break;
-        }
-    }
-
     //can't get a switch with ID to work with material ui bottom navigation
 
     const goToLinkedin = (e) => {
@@ -33,13 +22,17 @@ export default function Socials() {
         window.open("mailto:rociodiaz.sistemas@gmail.com");
     }
 
+    const goToGithub = () => {
+        window.open("https://github.com/rociodiaz-sistemas/MyResume");
+    }
+
     return (
         <>
             <BottomNavigation showLabels>
                 <BottomNavigationAction id="linkedin" onClick={goToLinkedin} label="LinkedIn" icon={<LinkedInIcon />} />
                 <BottomNavigationAction id="text" onClick={sendWhatsapp} label="Text me" icon={<WhatsAppIcon />} />
                 <BottomNavigationAction id="email" onClick={sendMail} label="Email me" icon={<EmailIcon />} />
-                <BottomNavigationAction id="github" onClick={goToSocials} label="Github" icon={<GitHubIcon />} />
+                <BottomNavigationAction id="github" onClick={goToGithub} label="Github" icon={<GitHubIcon />} />
             </BottomNavigation>
         </>
     );
