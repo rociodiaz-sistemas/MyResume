@@ -6,7 +6,7 @@
         background-color: var(--white);
         position: relative;
         z-index: 9;
-        /* gap: 35%; */
+        min-height: 63vh;
         display: flex;
         flex-direction: column;
     }
@@ -73,11 +73,13 @@
 @media screen and (max-width: 414px){
     .browser-mockup.with-url {
         max-height: 45vh;
+        min-height: 63vh;
     }
 }
 
 @media screen and (max-width: 375px){
     .browser-mockup.with-url {
         max-height: 55vh;
+        min-height: 63vh;
     }
 }
