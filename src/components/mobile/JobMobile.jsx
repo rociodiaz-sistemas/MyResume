@@ -1,4 +1,4 @@
-import { Chip, IconButton, Stack } from '@mui/material';
+import { Chip, IconButton } from '@mui/material';
 
 import Dots from '../modern-view/dots';
 

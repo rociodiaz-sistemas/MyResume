@@ -1,8 +1,8 @@
-import { Chip, IconButton, Stack } from '@mui/material';
+import { Chip, IconButton } from '@mui/material';
 
 import Dots from './dots';
 
-export default function Job({ img, alt, date, texts, activeStep, href, children, title, index, styleDots, isMobile}) {
+export default function Job({ img, alt, date, texts, activeStep, href, children, title, index, styleDots }) {
     return (
         <>
             <div className='title'><p className="title-ide">💼Experience </p> <p>{`(${index}) {`}</p></div>

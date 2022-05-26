@@ -12,7 +12,6 @@ function App() {
 
   React.useEffect(() => {
     window.addEventListener("resize", () => setMobile(window.innerWidth <= 768));
-    console.log(isMobile);
 
   }, []);
 
@@ -23,7 +22,7 @@ function App() {
           <TabletWrapper />
         </div> :
         <div className="App">
-          <MobileWrapper isMobile={isMobile}/>
+          <MobileWrapper isMobile={isMobile} />
         </div>
       }
 

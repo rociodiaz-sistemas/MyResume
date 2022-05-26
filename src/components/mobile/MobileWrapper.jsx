@@ -6,7 +6,6 @@ import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import Formation from '../modern-view/Formation';
 import HorizontalTabs from './HorizontalTabs';
-import Job from '../modern-view/Job';
 import JobMobile from './JobMobile';
 import LanguageButton from '../LanguageButton';
 import React from 'react';
@@ -14,7 +13,6 @@ import Skills from '../modern-view/Skills';
 import Socials from '../modern-view/Socials';
 import TabPanel from '../modern-view/TabPanel';
 import TypeAnimation from 'react-type-animation';
-import VerticalTabs from '../modern-view/tabs';
 import baufestLogo from '../../images/Baufest.png';
 import cfotech from '../../images/cfotech.png';
 import davinci from '../../images/davinci.png'
@@ -56,7 +54,6 @@ function MobileWrapper({ isMobile }) {
                         <img src={profilePic2} className="rounded-img" alt="pretty profile pic"></img>
                         <h1>ROCIO DIAZ</h1>
                         <p className='muted'> ReactJS | Frontend Developer</p>
-                        {/* <Button style={{ marginTop: " 20px" }} onClick={saveFile} variant="contained">DOWNLOAD RESUME</Button> */}
                         <LanguageButton />
                     </div>
                     <div className='socials'>
@@ -70,7 +67,7 @@ function MobileWrapper({ isMobile }) {
                     <TabPanel className={slideDirectionClass} value={tab} index={0}>
                         <div className='title'><p className="title-ide">👋About me </p> <p>{"() {"}</p></div>
                         <p className='text'>Hi! I'm a ReactJS Frontent Developer with 3+ years of experience from Argentina. I'm a native english speaker (USA citizen).</p>
-                        <p className='text'>
+                        <div className='text'>
                             <TypeAnimation
                                 cursor={true}
                                 sequence={[
@@ -80,10 +77,10 @@ function MobileWrapper({ isMobile }) {
                                     2000,
                                     "I'm considered an out-of-the-box creative thinker.",
                                 ]}
-                                wrapper="p"
+                                wrapper="div"
                                 repeat={1}
                             />
-                        </p>
+                        </div>
                         <p className='final'>{"}"}</p>
                     </TabPanel>
                     <TabPanel value={tab} index={1} className={slideDirectionClass}>
