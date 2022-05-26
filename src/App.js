@@ -1,17 +1,32 @@
 import './App.css';
 
-import React from "react";
+import React, { useState } from "react";
+
+import MobileWrapper from './components/mobile/MobileWrapper';
 import TabletWrapper from './components/modern-view/TabletWrapper';
 import { ThemeProvider } from '@mui/material/styles';
 import { theme } from './theme';
 
 function App() {
-  const isMobile = navigator.userAgentData.mobile || window.innerWidth <= 768;
+  const [isMobile, setMobile] = useState(window.innerWidth <= 768)
+
+  React.useEffect(() => {
+    window.addEventListener("resize", () => setMobile(window.innerWidth <= 768));
+    console.log(isMobile);
+
+  }, []);
+
   return (
     <ThemeProvider theme={theme}>
-      <div className="App">
-        <TabletWrapper isMobile={isMobile}/>
-      </div>
+      {!isMobile ?
+        <div className="App">
+          <TabletWrapper />
+        </div> :
+        <div className="App">
+          <MobileWrapper isMobile={isMobile}/>
+        </div>
+      }
+
     </ThemeProvider>
   );
 }

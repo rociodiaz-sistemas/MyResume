@@ -1,0 +1,83 @@
+@media only screen and (max-width: 768px) {
+    .browser-mockup.with-url {
+        width: 100%;
+        max-height: 56vh;
+        height: 62vh;
+        background-color: var(--white);
+        position: relative;
+        z-index: 9;
+        /* gap: 35%; */
+        display: flex;
+        flex-direction: column;
+    }
+
+    .socials {
+        padding-top: 0px;
+    }
+
+    .black-container {
+        width: unset;
+        min-height: 84vh;
+        height: 100%;
+    }
+
+    .title {
+        font-size: 1.2rem;
+    }
+
+    .text {
+        font-size: 1rem;
+    }
+
+    .text.experience {
+        font-size: 0.8em;
+    }
+
+    .black-content {
+        min-height: 70vh;
+    }
+
+    .black-tabs {
+        height: unset;
+    }
+
+    .content-page {
+        padding: 2%;
+        height: 100%;
+        gap: 6px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .centered-nav {
+        justify-content: center;
+    }
+
+    .rounded-img {
+        height: 185px;
+        width: auto;
+    }
+
+    h1 {
+        font-size: 1.8em;
+        margin-top: 0.5%;
+        margin-bottom: 0.5%;
+    }
+
+    .see-more-arrow {
+        place-self: end;
+        height: unset;
+    }
+}
+
+@media screen and (max-width: 414px){
+    .browser-mockup.with-url {
+        max-height: 45vh;
+    }
+}
+
+@media screen and (max-width: 375px){
+    .browser-mockup.with-url {
+        max-height: 55vh;
+    }
+}

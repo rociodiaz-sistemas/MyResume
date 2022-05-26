@@ -120,7 +120,7 @@ body {
 }
 
 .muted {
-  color: #757575;
+  color: #4a4848;
 }
 
 .principal-window {
@@ -131,7 +131,6 @@ body {
   background-color: #262121;
   height: 84vh;
   /* position: absolute; */
-  right: 200px;
   /* align-self: center; */
   width: 55%;
   /* right: 120px; */
@@ -197,7 +196,7 @@ p.text+p.final {
 }
 
 .text.experience {
-  font-size: 18px;
+  font-size: 1rem;
   padding-top: 10px;
 }
 
@@ -370,5 +369,24 @@ p.text+p.final {
   100% {
     -webkit-transform: translateX(100px);
     transform: translateX(100px);
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .rounded-img {
+    height: 155px !important;
+    height: auto;
+  }
+
+  .browser-mockup {
+    width: 32%;
+  }
+
+  .black-content{
+    font-size: 1.1em;
+  }
+
+  .smaller {
+    font-size: 0.6rem !important;
   }
 }

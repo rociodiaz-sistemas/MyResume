@@ -14,30 +14,30 @@ function a11yProps(index) {
     };
 }
 
-export default function VerticalTabs({ setTab, setActiveStep, direction }) {
+export default function HorizontalTabs({ setTab, setActiveStep, direction }) {
     const [value, setValue] = React.useState(0);
 
-    window.onwheel = function (e) {
-        if (e.deltaY > 0 && value < 2) {
-            if (value !== 3 ) {
-                setActiveStep(0);
-            }
-            setValue(value + 1);
-            setTab(value + 1, "down");
+    // window.onwheel = function (e) {
+    //     if (e.deltaY > 0 && value < 2) {
+    //         if (value !== 3) {
+    //             setActiveStep(0);
+    //         }
+    //         setValue(value + 1);
+    //         setTab(value + 1, "down");
 
-        }
-        if (e.deltaY < 0 && value > 0) {
-            if (value !== 3 ) {
-                setActiveStep(0);
-            }
-            setValue(value - 1);
-            setTab(value - 1, "up");
-        }
-        delete window.onscroll;
-    };
+    //     }
+    //     if (e.deltaY < 0 && value > 0) {
+    //         if (value !== 3) {
+    //             setActiveStep(0);
+    //         }
+    //         setValue(value - 1);
+    //         setTab(value - 1, "up");
+    //     }
+    //     delete window.onscroll;
+    // };
 
     const handleChange = (event, newValue) => {
-        if (newValue !== 3 ) {
+        if (newValue !== 3) {
             setActiveStep(0);
         }
         setValue(newValue);
@@ -46,15 +46,14 @@ export default function VerticalTabs({ setTab, setActiveStep, direction }) {
 
     return (
         <Box
-            sx={{ flexGrow: 1, bgcolor: 'transparent', display: 'flex', height: "100%", width: "100%" }}
+            sx={{ flexGrow: 1, bgcolor: 'transparent', display: 'flex', height: "100%", width: "100%", justifyContent: "center" }}
         >
             <Tabs
-                orientation={direction !== "horizontal" ? "vertical" : "horizontal"}
-                variant="scrollable"
+                orientation={"horizontal"}
                 value={value}
                 onChange={handleChange}
                 aria-label="Vertical tabs example"
-                sx={{ borderRight: 1, borderColor: 'divider', flexDirection: "row" }}
+                sx={{ flexDirection: "row" }}
             >
                 <Tab icon={<PersonOutlineIcon className='highlight' />} {...a11yProps(0)} />
                 <Tab icon={<WorkOutlineOutlinedIcon className='highlight' />} {...a11yProps(1)} />

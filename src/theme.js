@@ -59,7 +59,6 @@ export const theme = createTheme({
       styleOverrides: {
         root: {
           backgroundColor: "transparent",
-          WebkitJustifyContent: "unset"
         }
       }
     },
@@ -69,7 +68,8 @@ export const theme = createTheme({
           color: "black",
           ":hover": {
             color: "#bc7fb8"
-          }
+          },
+          minWidth: "unset"
         },
       }
     },
