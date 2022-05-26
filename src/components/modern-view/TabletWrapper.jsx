@@ -69,7 +69,7 @@ function TabletWrapper() {
                 <div className='black-content'>
                     <TabPanel className={slideDirectionClass} value={tab} index={0}>
                         <div className='title'><p className="title-ide">👋About me </p> <p>{"() {"}</p></div>
-                        <p className='text'>Hi! I'm a ReactJS Frontent Developer with 3+ years of experience from Argentina. I'm a native english speaker (USA citizen).</p>
+                        <p className='text'>Hi! I'm a ReactJS Frontent Developer from Argentina with 3+ years of experience. I'm a native english speaker (USA citizen).</p>
                         <p className='text'>
                             <TypeAnimation
                                 cursor={true}
