@@ -1,8 +1,8 @@
 import { Chip, IconButton, Stack } from '@mui/material';
 
-import Dots from './dots';
+import Dots from '../modern-view/dots';
 
-export default function Job({ img, alt, date, texts, activeStep, href, children, title, index, styleDots, isMobile}) {
+export default function JobMobile({ img, alt, date, texts, activeStep, href, children, title, index, styleDots }) {
     return (
         <>
             <div className='title'><p className="title-ide">💼Experience </p> <p>{`(${index}) {`}</p></div>
@@ -21,6 +21,7 @@ export default function Job({ img, alt, date, texts, activeStep, href, children,
                     </IconButton>
                 }
             </div>
+
             {texts.map((text) =>
                 <p className='text experience'>{text}</p>
             )}

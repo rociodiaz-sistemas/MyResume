@@ -13,7 +13,7 @@ import resume from '../pdfs/rocio-diaz-resume-cv.pdf';
 import resumeSpanish from '../pdfs/rocio-diaz-resume-cv-español.pdf';
 import { saveAs } from "file-saver";
 
-const options = ['DOWNLOAD RESUME', 'DESCARGAR     CV', "tutirituti"];
+const options = ['DOWNLOAD RESUME', 'DESCARGAR     CV'];
 
 export default function LanguageButton() {
     const [open, setOpen] = React.useState(false);
@@ -55,7 +55,7 @@ export default function LanguageButton() {
     return (
         <React.Fragment>
             <ButtonGroup style={{ marginTop: "15px" }} variant="contained" ref={anchorRef} aria-label="split button">
-                <Button style={{ borderRight: "1px solid #e9c309", width: "200px" }} onClick={handleClick}>{options[selectedIndex]}</Button>
+                <Button style={{ borderRight: "1px solid #e9c309", width: "82%" }} onClick={handleClick}>{options[selectedIndex]}</Button>
                 <Button
                     size="small"
                     aria-controls={open ? 'split-button-menu' : undefined}
@@ -73,6 +73,7 @@ export default function LanguageButton() {
                 role={undefined}
                 transition
                 disablePortal
+                style={{ zIndex: "1" }}
             >
                 {({ TransitionProps, placement }) => (
                     <Grow
