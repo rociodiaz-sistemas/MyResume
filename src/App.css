@@ -170,6 +170,11 @@ p.text+p.final {
   place-self: flex-end;
 }
 
+.final {
+  color: #e9c309;
+  place-self: flex-end;
+}
+
 .black-tabs {
   background-color: #262121;
   height: 84vh;
