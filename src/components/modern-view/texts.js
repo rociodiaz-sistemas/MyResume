@@ -1,5 +1,5 @@
 export const TEXTS_EXPERIENCE_CFO = ["> As the lead frontend developer for this startup project with a small team, I had to work side to side with our UX designer. The project had a tight deadline, and due to this I had to rearrange and prioritize our backlog and tasks. I took care of most of the demos for our client and pinpointed changes and new features from their feedback.",
-    "> Implemented SCRUM for our team, assumed a leadership role in abscence of our technical leader.",
+    "> Implemented SCRUM for our team",
     "> ReactJS, Hooks, CSS, HTML, Material UI."
 ];
 
