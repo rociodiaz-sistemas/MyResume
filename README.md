@@ -1,3 +1,12 @@
+This is my personal website hosted at netlify!
+
+Using create react app and react hooks.
+Is accesible, has animations, responsive, with scroll listeners, pdf downloaders, material UI.
+Just clone, npm start, or look at my code :)
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
