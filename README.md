@@ -1,7 +1,7 @@
 This is my personal website hosted at netlify!
 
 Using create react app and react hooks.
-Is accesible, has animations, responsive, with scroll listeners, pdf downloaders, material UI.
+Is accessible, has animations, responsive, with scroll listeners, pdf downloaders, material UI.
 Just clone, npm start, or look at my code :)
 
 
